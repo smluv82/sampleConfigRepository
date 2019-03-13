@@ -1,3 +1,10 @@
+#MANAGEMENT CONFIGURATION
+management:
+   endpoints:
+      web:
+         exposure:
+            include: "*"
+
 who:
    am:
       i: local-smluv82
