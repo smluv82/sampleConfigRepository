@@ -1,3 +1,12 @@
+#MANAGEMENT CONFIGURATION
+#SPRING BOOT 2.0 가면서 actuator default로 활성화 되는건 health 밖에 없음.
+#exposure.include *로 전체 활성화
+management:
+   endpoints:
+      web:
+         exposure:
+            include: "*"
+
 eureka:
    client:
       #유레카 서비스에(자신)을 등록 할 여부
