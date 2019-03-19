@@ -1,0 +1,72 @@
+spring:
+  datasource:
+    sampleboot2:
+      jdbc-url: jdbc:mysql://localhost:3306/sampleboot2?useUnicode=yes&characterEncoding=UTF-8&serverTimezone=UTC
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: sampleboot2
+      password: 4567cvbn
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    properties:
+      hibernate:
+        format_sql: true
+    generate-ddl: true
+
+#eureka
+eureka:
+   instance:
+      #서비스 이름 대신 서비스 IP 주소 등록
+      preferIpAddress: true
+   client:
+      #유레카 서버에 서비스 등록
+      registerWithEureka: true
+      #레지스트리 사본을 로컬로 가져오는설정
+      fetchRegistry: true
+      serviceUrl:
+         defaultZone: http://localhost:5002/eureka/
+
+#spring boot actuator
+management:
+  endpints:
+    web:
+      exposure:
+        include: "*"
+#      base-path: /act
+#      path-mapping:
+#        health: healthcheck
+
+#REDIS CONFIGURATION
+  redis:
+    host: localhost
+    port: 6379
+    password: 
+    jedis:
+      pool:
+        max-idle: 100
+        max-active: 300
+        max-wait: 5000
+        min-idle: 10
+
+#REST CONFIGURATION    
+rest: 
+  bithumb: 
+    host: https://api.bithumb.com
+    port: 443
+    timeout: 60000
+  upbit:
+    host: https://api.upbit.com
+    port: 443
+    timeout: 60000
+
+#LOGGING CONFIGURATION
+logging: 
+  config: classpath:logback.xml
+  
+#TELEGRAM BOT
+#TOKEN  740776787:AAFASL5q_kaOn1tShkGu58GLgulsIeWFA6g
+telegram:
+  bot:
+    username: smbot
+    chatId: -349640687
+    token: 740776787:AAFASL5q_kaOn1tShkGu58GLgulsIeWFA6g
