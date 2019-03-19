@@ -1,4 +1,6 @@
 #MANAGEMENT CONFIGURATION
+#SPRING BOOT 2.0 가면서 actuator default로 활성화 되는건 health 밖에 없음.
+#exposure.include *로 전체 활성화
 management:
    endpoints:
       web:

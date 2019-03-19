@@ -1,0 +1,11 @@
+eureka:
+   client:
+      #유레카 서비스에(자신)을 등록 할 여부
+      registerWithEureka: false
+      #레지스트리 정보를 로컬에 캐싱 여부
+      fetchRegistry: false
+   server:
+      #서버가 요청을 받기 전 대기 할 초기 시간
+      waitTimeInMsWhenSyncEmpty: 5
+   serviceUrl:
+      defaultZone: http://localhost:8761
