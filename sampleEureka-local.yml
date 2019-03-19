@@ -8,4 +8,4 @@ eureka:
       #서버가 요청을 받기 전 대기 할 초기 시간
       waitTimeInMsWhenSyncEmpty: 5
    serviceUrl:
-      defaultZone: http://localhost:5003
+      defaultZone: http://localhost:5002
