@@ -1,0 +1,12 @@
+#eureka
+eureka:
+   instance:
+      #서비스 이름 대신 서비스 IP 주소 등록
+      preferIpAddress: true
+   client:
+      #유레카 서버에 서비스 등록
+      registerWithEureka: true
+      #레지스트 사본을 로컬로 가져오는 설정
+      fetchRegistry: true
+      serviceUrl:
+         defaultZone: http://localhost:5002/eureka/

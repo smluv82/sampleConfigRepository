@@ -60,8 +60,8 @@ rest:
     timeout: 60000
 
 #LOGGING CONFIGURATION
-logging: 
-  config: classpath:logback.xml
+#logging: 
+#  config: classpath:logback.xml
   
 #TELEGRAM BOT
 #TOKEN  740776787:AAFASL5q_kaOn1tShkGu58GLgulsIeWFA6g
